@@ -1,0 +1,8 @@
+vue-router
+you will get $route and $router instances on this inside any component
+eg.
+this.$router
+this.$route
+
+this.$route - current route information
+this.$router - navigate between routes

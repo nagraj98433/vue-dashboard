@@ -1,11 +1,10 @@
-  <template>
+<template>
 	<div id="app">
 		<router-view></router-view>
 	</div>
 </template>
 
 <script>
-// import "./assets/scss/main.scss";
 export default {
 	name: "App",
 	components: {},
@@ -13,6 +12,7 @@ export default {
 </script>
 
 <style>
+@import "~@/assets/scss/main.scss";
 /* #app {
 	font-family: Avenir, Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;

@@ -7,6 +7,7 @@
 		</div>
 		<div class="row align_btm">
 			<div class="col pt-2">
+				<!-- <router-link to="/home"></router-link> -->
 				<button type="button" class="btn btn-login text-light" @click="login()">
 					LOGIN
 				</button>
@@ -14,10 +15,19 @@
 		</div>
 	</div>
 </template>
-
+<script>
+export default {
+	name: "login",
+	methods: {
+		login() {
+			this.$router.replace({ path: "/dashboard" });
+		},
+	},
+};
+</script>
 <style>
 .bg-img-pets {
-	background-image: url("./pet_dogs.jpeg");
+	background-image: url("~@/assets/img/pet_dogs.jpeg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100%;
@@ -27,7 +37,7 @@
 	height: 100vh;
 }
 .top-logo {
-	background-image: url("./login_logo.png");
+	background-image: url("~@/assets/img/login_logo.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 65%;

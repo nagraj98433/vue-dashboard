@@ -1,3 +1,4 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 @import './navbar.scss';
 
@@ -8,4 +9,7 @@
 }
 body{
     font-family: 'Montserrat', sans-serif;
+}
+.content-wrapper{
+	padding-left: 300px;
 }

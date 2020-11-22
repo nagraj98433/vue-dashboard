@@ -1,131 +1,7 @@
 <template>
-	<div class="container-fluid">
+	<div class="container-fluid content-wrapper">
+		<Sidebar />
 		<div class="row pr-2 pl-2 bg-color">
-			<div class="col-2 sidebar">
-				<div class="row">
-					<div class="col-12">
-						<div class="row">
-							<div class="col col-4 px-0 text-right pt-1">
-								<img
-									src="./dashbord_icon.jpg"
-									alt="left-top-icon"
-									class="img-fluid"
-								/>
-							</div>
-							<div class="col col">
-								<p class="font-weight-bold mb-0">Acme Co.</p>
-								<small>Palo Alto, CA</small>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row mt-3">
-					<div class="col-12">
-						<p class="text-secondary small mb-0">MAIN MENU</p>
-					</div>
-				</div>
-				<div class="row pl-2 mb-2">
-					<div class="col-12 dashbord-style">
-						<p class="mb-0 font-weight-bold">
-							<i class="fas fa-columns mr-2 text-primary"></i>Dashbord
-						</p>
-					</div>
-				</div>
-				<div class="row pl-2 mb-2">
-					<div class="col-12">
-						<small class="mb-0 font-weight-bold text-secondary"
-							><i class="fab fa-app-store-ios mr-2"></i>Apps</small
-						>
-					</div>
-				</div>
-				<div class="row pl-2 mb-2">
-					<div class="col-12">
-						<small class="mb-0 font-weight-bold text-secondary"
-							><i class="fas fa-lock mr-2"></i>Security</small
-						>
-					</div>
-				</div>
-				<div class="row pl-2 mb-2">
-					<div class="col-12">
-						<small class="mb-0 font-weight-bold text-secondary"
-							><i class="fas fa-columns mr-2"></i>Reports</small
-						>
-					</div>
-				</div>
-				<div class="row pl-2 mb-2">
-					<div class="col-12">
-						<small class="mb-0 font-weight-bold text-secondary"
-							><i class="fas fa-user-friends mr-2"></i>People</small
-						>
-					</div>
-				</div>
-				<div class="row pl-2 mb-2">
-					<div class="col-12">
-						<small class="mb-0 font-weight-bold text-secondary"
-							><i class="fas fa-columns mr-2"></i>Teams</small
-						>
-					</div>
-				</div>
-				<div class="row pl-2 mb-3">
-					<div class="col-12">
-						<small class="mb-0 font-weight-bold text-secondary"
-							><i class="fas fa-columns mr-2"></i>Request</small
-						>
-					</div>
-				</div>
-				<div class="row mb-2">
-					<div class="col-12">
-						<p class="text-secondary small mb-0">WORKFLOWS</p>
-					</div>
-				</div>
-				<div class="row pl-2 mb-2">
-					<div class="col-12">
-						<small class="mb-0 font-weight-bold text-secondary"
-							><i class="fab fa-envira mr-2"></i>Gallary</small
-						>
-					</div>
-				</div>
-				<div class="row pl-2 mb-2">
-					<div class="col-12">
-						<small class="mb-0 font-weight-bold text-secondary"
-							><i class="fas fa-columns mr-2"></i>Workflows</small
-						>
-					</div>
-				</div>
-				<div class="row pl-2 mb-3">
-					<div class="col-12">
-						<small class="mb-0 font-weight-bold text-secondary"
-							><i class="fas fa-tasks mr-2"></i>My tasks</small
-						>
-					</div>
-				</div>
-				<div class="row mb-2">
-					<div class="col-12">
-						<p class="text-secondary small mb-0">GENERAL</p>
-					</div>
-				</div>
-				<div class="row pl-2 mb-2">
-					<div class="col-12">
-						<small class="mb-0 font-weight-bold text-secondary"
-							><i class="fas fa-columns mr-2"></i>Intergration</small
-						>
-					</div>
-				</div>
-				<div class="row pl-2 mb-2">
-					<div class="col-12">
-						<small class="mb-0 font-weight-bold text-secondary"
-							><i class="fas fa-users mr-2"></i>Users</small
-						>
-					</div>
-				</div>
-				<div class="row pl-2 mb-2">
-					<div class="col-12">
-						<small class="mb-0 font-weight-bold text-secondary"
-							><i class="fas fa-cogs mr-2"></i>settings</small
-						>
-					</div>
-				</div>
-			</div>
 			<div class="col-10">
 				<div class="row">
 					<div class="col-12 top-section">
@@ -322,16 +198,19 @@
 		</div>
 	</div>
 </template>
-
+<script>
+import Sidebar from "../components/dashboard/sidebar";
+export default {
+	name: "Dashboard",
+	components: {
+		Sidebar,
+	},
+};
+</script>
 <style>
 .dashbord {
 	height: 100vh;
 	/* background-color: blanchedalmond; */
-}
-.sidebar {
-	height: 100vh;
-	/* width: 40vh; */
-	background-color: #efefef;
 }
 .bg-color {
 	background-color: #efefef;
