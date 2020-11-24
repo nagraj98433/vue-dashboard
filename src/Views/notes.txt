@@ -6,3 +6,179 @@ this.$route
 
 this.$route - current route information
 this.$router - navigate between routes
+
+
+git commands
+
+always code in your branch. to create branch
+- git checkout -b my-branch-name
+
+bahut sara galat code kar diya jo nhi chahiye, inshort reset karna h
+- git reset --hard
+
+pull back commited changes
+- git reset HEAD~1
+
+
+sidebar code
+
+<div class="container sidebar bg-info">
+		<div class="row">
+			<div class="col-12">
+				<div class="row">
+					<div class="col col-4 px-0 text-right pt-1">
+						<img
+							src="~@/assets/img/dashbord_icon.jpg"
+							alt="left-top-icon"
+							class="img-fluid"
+						/>
+					</div>
+					<div class="col col">
+						<p class="font-weight-bold mb-0">Acme Co.</p>
+						<small>Palo Alto, CA</small>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row mt-3">
+			<div class="col-12">
+				<p class="text-secondary small mb-0">MAIN MENU</p>
+			</div>
+		</div>
+		<ul>
+			<li v-for="(link, index) in links" :key="'l_' + index">
+				<router-link :to="link.path">
+					<fa :icon="link.icon" />
+					{{ link.name }}
+				</router-link>
+			</li>
+		</ul>
+		<div class="row pl-2 mb-2">
+			<div class="col-12 dashbord-style">
+				<p class="mb-0 font-weight-bold">
+					<i class="fas fa-columns mr-2 text-primary"></i>Dashbord
+				</p>
+			</div>
+		</div>
+		<div class="row pl-2 mb-2">
+			<div class="col-12">
+				<small class="mb-0 font-weight-bold text-secondary"
+					><i class="fab fa-app-store-ios mr-2"></i>Apps</small
+				>
+			</div>
+		</div>
+		<div class="row pl-2 mb-2">
+			<div class="col-12">
+				<small class="mb-0 font-weight-bold text-secondary"
+					><i class="fas fa-lock mr-2"></i>Security</small
+				>
+			</div>
+		</div>
+		<div class="row pl-2 mb-2">
+			<div class="col-12">
+				<small class="mb-0 font-weight-bold text-secondary"
+					><i class="fas fa-columns mr-2"></i>Reports</small
+				>
+			</div>
+		</div>
+		<div class="row pl-2 mb-2">
+			<div class="col-12">
+				<small class="mb-0 font-weight-bold text-secondary"
+					><i class="fas fa-user-friends mr-2"></i>People</small
+				>
+			</div>
+		</div>
+		<div class="row pl-2 mb-2">
+			<div class="col-12">
+				<small class="mb-0 font-weight-bold text-secondary"
+					><i class="fas fa-columns mr-2"></i>Teams</small
+				>
+			</div>
+		</div>
+		<div class="row pl-2 mb-3">
+			<div class="col-12">
+				<small class="mb-0 font-weight-bold text-secondary"
+					><i class="fas fa-columns mr-2"></i>Request</small
+				>
+			</div>
+		</div>
+		<div class="row mb-2">
+			<div class="col-12">
+				<p class="text-secondary small mb-0">WORKFLOWS</p>
+			</div>
+		</div>
+		<div class="row pl-2 mb-2">
+			<div class="col-12">
+				<small class="mb-0 font-weight-bold text-secondary"
+					><i class="fab fa-envira mr-2"></i>Gallary</small
+				>
+			</div>
+		</div>
+		<div class="row pl-2 mb-2">
+			<div class="col-12">
+				<small class="mb-0 font-weight-bold text-secondary"
+					><i class="fas fa-columns mr-2"></i>Workflows</small
+				>
+			</div>
+		</div>
+		<div class="row pl-2 mb-3">
+			<div class="col-12">
+				<small class="mb-0 font-weight-bold text-secondary"
+					><i class="fas fa-tasks mr-2"></i>My tasks</small
+				>
+			</div>
+		</div>
+		<div class="row mb-2">
+			<div class="col-12">
+				<p class="text-secondary small mb-0">GENERAL</p>
+			</div>
+		</div>
+		<div class="row pl-2 mb-2">
+			<div class="col-12">
+				<small class="mb-0 font-weight-bold text-secondary"
+					><i class="fas fa-columns mr-2"></i>Intergration</small
+				>
+			</div>
+		</div>
+		<div class="row pl-2 mb-2">
+			<div class="col-12">
+				<small class="mb-0 font-weight-bold text-secondary"
+					><i class="fas fa-users mr-2"></i>Users</small
+				>
+			</div>
+		</div>
+		<div class="row pl-2 mb-2">
+			<div class="col-12">
+				<small class="mb-0 font-weight-bold text-secondary"
+					><i class="fas fa-cogs mr-2"></i>settings</small
+				>
+			</div>
+		</div>
+	</div>
+
+
+	
+	it was in main.scss 
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+<div class="sidebar bg-color pl-2 rounded" id="hover">
+		<div class="logo">
+			<img src="~@/assets/img/logo.png" alt="appa-logo" />
+		</div>
+		<div class="pt-2">
+			<p class="text-muted style1">LEVEL A (SUPERADMIN)</p>
+		</div>
+		<div class="">
+			<vue-dropdown></vue-dropdown>
+		
+	</div>
+	</div>
+
+
+
+

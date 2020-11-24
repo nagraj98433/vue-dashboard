@@ -7,7 +7,6 @@
 		</div>
 		<div class="row align_btm">
 			<div class="col pt-2">
-				<!-- <router-link to="/home"></router-link> -->
 				<button type="button" class="btn btn-login text-light" @click="login()">
 					LOGIN
 				</button>
@@ -37,21 +36,30 @@ export default {
 	height: 100vh;
 }
 .top-logo {
-	background-image: url("~@/assets/img/login_logo.png");
+	background-image: url("~@/assets/img/logo.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 65%;
 	height: 140px;
 }
 .bg-white-gradient {
-	background-image: linear-gradient(
-		#ffffff5c,
-		#f2f7fc,
-		#ffffffb3,
-		#ffffffab,
-		transparent
-	);
-	box-shadow: 13px 12px 2px -33px white;
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
+	background: -moz-linear-gradient(
+		top,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(255, 255, 255, 0) 100%
+	); /* FF3.6-15 */
+	background: -webkit-linear-gradient(
+		top,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(255, 255, 255, 0) 100%
+	); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(
+		to bottom,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(255, 255, 255, 0) 100%
+	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
 }
 .align_btm {
 	text-align: center;
@@ -60,7 +68,22 @@ export default {
 	/* bottom: 35px; */
 	bottom: 0px;
 	height: 100px;
-	background-image: linear-gradient(360deg, black, transparent);
+	background: -moz-linear-gradient(
+		top,
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0.65) 100%
+	); /* FF3.6-15 */
+	background: -webkit-linear-gradient(
+		top,
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0.65) 100%
+	); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0.65) 100%
+	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
 }
 
 .btn-login {
