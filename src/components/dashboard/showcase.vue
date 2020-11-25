@@ -1,5 +1,5 @@
 <template>
-	<div class="container-fluid mx-3">
+	<div class="container-fluid pl-4">
 		<div class="row">
 			<div
 				class="col-12 bg-img text-center pt-5 text-light position-relative rounded"
