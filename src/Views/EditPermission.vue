@@ -1,5 +1,5 @@
 <template>
-	<div class="container my-modal">
+	<div class="container">
 		<div class="overflow">
 			<legend>Edit Permission</legend>
 			<div>
@@ -49,8 +49,8 @@
 						class="border-top-0 border-left-0 border-right-0 hover-effect"
 					/>
 				</div>
-				<div class="mt-3 border-bottom rounded">
-					<table class="table table-striped text-center overflow-auto">
+				<div class="mt-3 border-bottom rounded d-flex flex-wrap overflow-auto">
+					<table class="table table-striped text-center">
 						<th>Permission ID</th>
 						<th>Permission Name</th>
 						<th>Permission Discription</th>
@@ -62,32 +62,6 @@
 								Administrator priviliges to any user that is assigned this
 								permission.
 							</td>
-						</tr>
-						<tr>
-							<!-- <td>3</td>
-							<td>P1</td>
-							<td>This provides access to the P1 Link</td>
-						</tr>
-						<tr>
-							<td>4</td>
-							<td>P2</td>
-							<td>This provides access to the P2 Link</td>
-						</tr>
-						<tr>
-							<td>5</td>
-							<td>P3</td>
-							<td>This provides access to the P3 Link</td>
-						</tr>
-						<tr>
-							<td>6</td>
-							<td>P4</td>
-							<td>This provides access to the P4 Link</td>
-						</tr>
-						<tr>
-							<td>7</td>
-							<td>P5</td>
-							<td>This provides access to the P5 Link</td>
-						</tr> -->
 						</tr>
 					</table>
 				</div>
