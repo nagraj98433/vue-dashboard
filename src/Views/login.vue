@@ -155,4 +155,11 @@ export default {
 		padding: 20px 100px;
 	}
 }
+.btn-login:hover {
+	transform: scale(0.95);
+	background: black;
+}
+.btn-login {
+	transition: ease-in-out 0.2s;
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-	<div class="container-fluid content-wrapper" id="content-wrapper">
+	<div class="container-fluid content-wrapper menu" id="content-wrapper">
 		<sidebar />
 		<div class="container-fluid px-0">
 			<navbar />

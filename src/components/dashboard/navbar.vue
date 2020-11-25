@@ -1,6 +1,9 @@
 <template>
 	<nav class="navbar d-flex pl-3">
-		<b-button @click="togglenav()" class="py-2 px-2 badge badge-primary"
+		<b-button
+			@click="togglenav()"
+			class="py-2 px-2 badge badge-success border-0"
+			id="menu2"
 			><fa icon="bars"
 		/></b-button>
 		<div class="d-flex flex-grow-1 ml-3" style="flex-direction: column">
@@ -54,16 +57,13 @@ export default {
 		togglenav() {
 			var el = document.getElementById("res-sidebar");
 			var el_2 = document.getElementById("content-wrapper");
+			var el_3 = document.getElementById("menu2");
 			el_2.style.transition = "all .5s ease";
 
-			if (el.style.display == "block") {
-				el.style.display = "none";
-			} else {
+			if (el_2.style.paddingLeft == "0px") {
+				el_2.style.paddingLeft = "280px";
+				el_3.style.display = "none";
 				el.style.display = "block";
-			}
-			if (el_2.style.paddingLeft == "280px") {
-				el_2.style.paddingLeft = "0px";
-				el_2.style.margin = "0px 0px";
 			} else {
 				el_2.style.paddingLeft = "280px";
 			}
@@ -114,5 +114,8 @@ export default {
 }
 .dropdown-menu {
 	left: -73px;
+}
+#menu2 {
+	display: none;
 }
 </style>
