@@ -1,5 +1,5 @@
 <template>
-	<div class="res-sidebar">
+	<div class="res-sidebar" id="res-sidebar">
 		<b-sidebar v-model="visible" width="280px" no-header>
 			<div class="container bg-color px-0">
 				<router-link class="logo" to="/">
@@ -170,6 +170,9 @@ export default {
 			}
 		}
 	}
+}
+.res-sidebar {
+	display: block;
 }
 @media screen and (min-width: 320px) and (max-width: 575.99px) {
 	.res-sidebar {

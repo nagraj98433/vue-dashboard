@@ -1,7 +1,7 @@
 <template>
-	<div class="container-fluid content-wrapper">
+	<div class="container-fluid content-wrapper" id="content-wrapper">
 		<sidebar />
-		<div class="container">
+		<div class="container-fluid px-0">
 			<navbar />
 			<router-view />
 			<Footer />

@@ -1,6 +1,6 @@
 <template>
-	<nav class="navbar d-flex px-0">
-		<b-button @click="alert('Clicked')" class="py-2 px-2 badge badge-primary"
+	<nav class="navbar d-flex pl-3">
+		<b-button @click="togglenav()" class="py-2 px-2 badge badge-primary"
 			><fa icon="bars"
 		/></b-button>
 		<div class="d-flex flex-grow-1 ml-3" style="flex-direction: column">
@@ -50,7 +50,25 @@ export default {
 	data() {
 		return {};
 	},
-	methods: {},
+	methods: {
+		togglenav() {
+			var el = document.getElementById("res-sidebar");
+			var el_2 = document.getElementById("content-wrapper");
+			el_2.style.transition = "all .5s ease";
+
+			if (el.style.display == "block") {
+				el.style.display = "none";
+			} else {
+				el.style.display = "block";
+			}
+			if (el_2.style.paddingLeft == "280px") {
+				el_2.style.paddingLeft = "0px";
+				el_2.style.margin = "0px 0px";
+			} else {
+				el_2.style.paddingLeft = "280px";
+			}
+		},
+	},
 };
 </script>
 <style>
