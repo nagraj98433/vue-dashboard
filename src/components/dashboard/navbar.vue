@@ -56,9 +56,16 @@ export default {
 	methods: {
 		togglenav() {
 			var el = document.getElementById("res-sidebar");
+
 			var el_2 = document.getElementById("content-wrapper");
 			var el_3 = document.getElementById("menu2");
 			el_2.style.transition = "all .5s ease";
+
+			if (el.style.display == "none") {
+				el.style.display = "block";
+			} else {
+				// el.style.display = "block";
+			}
 
 			if (el_2.style.paddingLeft == "0px") {
 				el_2.style.paddingLeft = "280px";

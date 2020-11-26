@@ -201,7 +201,7 @@ export default {
 .res-sidebar {
 	display: block;
 }
-@media screen and (min-width: 320px) and (max-width: 575.99px) {
+@media screen and (max-width: 576px) and (min-width: 320px) {
 	.res-sidebar {
 		display: none;
 	}

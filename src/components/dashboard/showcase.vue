@@ -62,20 +62,12 @@ export default {
 	text-decoration: none;
 }
 .sec-left:hover {
-	/* background-color: rgba(0, 128, 128, 0.411); */
-	background-image: linear-gradient(
-		to bottom,
-		rgba(117, 19, 93, 0.73),
-		rgba(245, 246, 252, 0.52)
-	);
+	background-color: #0093e9;
+	background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
 }
 .sec-right:hover {
-	/* background-color: rgba(0, 128, 128, 0.411); */
-	background-image: linear-gradient(
-		to bottom,
-		rgba(117, 19, 93, 0.73),
-		rgba(245, 246, 252, 0.52)
-	);
+	background-color: #0093e9;
+	background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
 }
 .sec-left {
 	transition: all 1s;
