@@ -1,5 +1,5 @@
 <template>
-	<nav class="navbar d-flex sid-style">
+	<nav class="navbar d-flex sid-style mt-1">
 		<b-button
 			@click="togglenav()"
 			class="py-2 px-2 badge badge-success border-0"
@@ -104,8 +104,8 @@ export default {
 	border-radius: 2px;
 	background-image: linear-gradient(
 			to bottom,
-			rgba(0, 0, 0, 0.73),
-			rgba(255, 255, 255, 0.52)
+			rgba(255, 255, 255, 0.52),
+			rgba(0, 0, 0, 0.73)
 		),
 		url("~@/assets/img/dog.jpg");
 }
