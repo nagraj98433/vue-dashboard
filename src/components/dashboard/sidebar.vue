@@ -32,7 +32,7 @@
 						</span>
 					</b-list-group-item>
 					<b-collapse id="collapse-1" class="mt-2" visible>
-						<b-list-group flush>
+						<b-list-group>
 							<b-list-group-item
 								v-for="(link, index) in links"
 								:key="'l_' + index"
