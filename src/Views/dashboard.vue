@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="container-fluid content-wrapper menu overflow-hidden pr-0"
+		class="container-fluid content-wrapper menu overflow-hidden pr-2"
 		id="content-wrapper"
 	>
 		<sidebar />

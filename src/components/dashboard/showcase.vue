@@ -30,8 +30,8 @@
 						<span style="font-size: 35px" class="text-warning box"
 							><fa icon="search" class="change"
 						/></span>
-						<p style="font-size: 18px" class="mb-1 mt-3">GUIDE</p>
-						<p>Guide for your assistance</p>
+						<p style="font-size: 18px" class="mb-1 mt-3 text-light">GUIDE</p>
+						<p class="text-light">Guide for your assistance</p>
 					</div>
 				</router-link>
 			</div>
@@ -41,8 +41,8 @@
 						<span style="font-size: 35px" class="text-warning box"
 							><fa icon="question" class="change" />
 						</span>
-						<p style="font-size: 20px" class="mb-1 mt-3">FAQ</p>
-						<p>Most Frequent Questions</p>
+						<p style="font-size: 20px" class="mb-1 mt-3 text-light">FAQ</p>
+						<p class="text-light">Most Frequent Questions</p>
 					</div>
 				</router-link>
 			</div>
