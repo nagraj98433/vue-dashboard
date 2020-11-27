@@ -1,5 +1,5 @@
 <template>
-	<div class="res-sidebar" id="res-sidebar bg-info">
+	<div class="res-sidebar sidbar" id="res-sidebar bg-info">
 		<b-sidebar v-model="visible" width="260px" no-header white shadow>
 			<div class="container side-border px-0">
 				<span class="d-flex justify-content-between bg-colr py-3">
@@ -7,7 +7,7 @@
 						<img src="~@/assets/img/logo.png" alt="appa-logo" />
 					</router-link>
 					<span class="d-flex align-items-center pr-2">
-						<b-button @click="togglena1()" class="border-0"
+						<b-button @click="togglesid()" class="border-0"
 							><fa icon="bars"
 						/></b-button>
 					</span>
@@ -147,25 +147,7 @@ export default {
 		};
 	},
 	methods: {
-		togglena1() {
-			var el3 = document.getElementById("res-sidebar");
-			var el5 = document.getElementById("menu2");
-			el3.style.display = "none";
-			var el4 = document.getElementsByClassName("content-wrapper");
-			el4[0].style.transition = "ease .5s all";
-			if (el4[0].style.paddingLeft == "280px") {
-				el4[0].style.paddingLeft = "0px";
-				el5.style.display = "none";
-			} else {
-				el4[0].style.paddingLeft = "0px";
-				el5.style.display = "block";
-			}
-			if (el5.style.display == "none") {
-				el5.style.display = "block";
-			} else {
-				el5.style.display = "block";
-			}
-		},
+		togglesid() {},
 	},
 };
 </script>
@@ -198,9 +180,7 @@ export default {
 		}
 	}
 }
-.res-sidebar {
-	display: block;
-}
+
 .b-sidebar > .b-sidebar-body {
 	flex-grow: 1;
 	height: 100%;

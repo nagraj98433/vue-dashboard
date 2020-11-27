@@ -1,15 +1,7 @@
 <template>
 	<div class="container-fluid mt-2">
 		<div class="row">
-			<div class="col-12 bg-img pt-5 text-light position-relative rounded">
-				<div class="profile bg-dark py-2" id="toggle">
-					<p class="mb-0 text-muted">
-						<span class="mr-1"><i class="fas fa-user-alt"></i></span> My Profile
-					</p>
-					<p class="mb-0 text-left pl-1 text-muted">
-						<span class="mr-2"><i class="fas fa-sign-out-alt"></i></span>Logout
-					</p>
-				</div>
+			<div class="col-12 bg-img pt-5 text-light position-relative">
 				<div class="align-bottm">
 					<p style="font-size: 28px; font-weight: 600">
 						American Pet Products Association.
@@ -24,10 +16,10 @@
 			</div>
 		</div>
 		<div class="row mt-3">
-			<div class="col sec-left mr-4 rounded text-center font-size py-4">
+			<div class="col sec-left mr-4 all_radius text-center font-size py-4">
 				<router-link class="logo text-dark text-style" to="#"
 					><div>
-						<span style="font-size: 35px" class="text-warning box"
+						<span style="font-size: 35px" class="text-light box"
 							><fa icon="search" class="change"
 						/></span>
 						<p style="font-size: 18px" class="mb-1 mt-3 text-light">GUIDE</p>
@@ -35,10 +27,10 @@
 					</div>
 				</router-link>
 			</div>
-			<div class="col sec-right rounded text-center font-size py-4">
+			<div class="col sec-right all_radius text-center font-size py-4">
 				<router-link class="logo text-dark text-style" to="#">
 					<div>
-						<span style="font-size: 35px" class="text-warning box"
+						<span style="font-size: 35px" class="text-light box"
 							><fa icon="question" class="change" />
 						</span>
 						<p style="font-size: 20px" class="mb-1 mt-3 text-light">FAQ</p>

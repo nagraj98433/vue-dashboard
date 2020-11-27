@@ -1,9 +1,8 @@
 <template>
-	<nav class="navbar d-flex sid-style mt-1">
+	<nav class="navbar d-flex sid-style mt-0">
 		<b-button
-			@click="togglenav()"
+			@click="alert('dbkdbkb')"
 			class="py-2 px-2 badge badge-success border-0"
-			id="menu2"
 			><fa icon="bars"
 		/></b-button>
 		<div class="d-flex flex-grow-1 ml-3" style="flex-direction: column">
@@ -16,7 +15,12 @@
 			</small>
 		</div>
 		<div class="d-flex align-items-center">
-			<b-button variant="primary" class="text-light" @click="fullScreen()">
+			<b-button
+				variant="primary"
+				class="text-light"
+				id="expand"
+				@click="fullScreen()"
+			>
 				<fa icon="expand" />
 			</b-button>
 			<b-dropdown variant="link" class="text-success">
@@ -51,40 +55,24 @@
 export default {
 	name: "navbar",
 	data() {
-		return {};
+		return { isFullscreen: false };
 	},
 	methods: {
-		togglenav() {
-			var el = document.getElementById("res-sidebar");
-
-			var el_2 = document.getElementById("content-wrapper");
-			var el_3 = document.getElementById("menu2");
-			el_2.style.transition = "all .5s ease";
-
-			if (el.style.display == "none") {
-				el.style.display = "block";
-			} else {
-				// el.style.display = "block";
-			}
-
-			if (el_2.style.paddingLeft == "0px") {
-				el_2.style.paddingLeft = "280px";
-				el_3.style.display = "none";
-				el.style.display = "block";
-			} else {
-				el_2.style.paddingLeft = "280px";
-			}
-		},
+		toggle_nav() {},
 		fullScreen() {
 			var elem = document.getElementById("content-wrapper");
-			if (elem.requestFullscreen) {
+			var expicon = document.getElementById("expand");
+
+			this.isFullscreen = !this.isFullscreen;
+
+			if (this.isFullscreen) {
 				elem.requestFullscreen();
-			} else if (elem.webkitRequestFullscreen) {
-				/* Safari */
-				elem.webkitRequestFullscreen();
-			} else if (elem.msRequestFullscreen) {
-				/* IE11 */
-				elem.msRequestFullscreen();
+				elem.style.backgroundColor = "#eaeae9";
+				expicon.style.backgroundColor = "black";
+			} else {
+				document.exitFullscreen();
+				elem.style.backgroundColor = "#eaeae9";
+				expicon.style.backgroundColor = "#007bff";
 			}
 		},
 	},
@@ -101,7 +89,7 @@ export default {
 	background-repeat: no-repeat;
 	background-size: cover;
 	min-height: 50vh;
-	border-radius: 2px;
+	border-radius: 0.5rem;
 	background-image: linear-gradient(
 			to bottom,
 			rgba(255, 255, 255, 0.52),
@@ -127,15 +115,11 @@ export default {
 	border-radius: 5px;
 	padding: 10px 0px;
 }
-#toggle1,
-#toggle {
-	display: none;
-}
 .dropdown-menu {
 	left: -73px;
 }
 #menu2 {
-	display: none;
+	display: block;
 }
 @media screen and (min-width: 320px) and (max-width: 575.99px) {
 	#menu2 {

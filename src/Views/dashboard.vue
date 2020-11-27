@@ -1,10 +1,7 @@
 <template>
-	<div
-		class="container-fluid content-wrapper menu overflow-hidden pr-2"
-		id="content-wrapper"
-	>
+	<div class="container-fluid content-wrapper menu pr-2" id="content-wrapper">
 		<sidebar />
-		<div class="container-fluid px-0">
+		<div class="container-fluid px-0 pt-1">
 			<navbar />
 			<router-view />
 			<Footer />
