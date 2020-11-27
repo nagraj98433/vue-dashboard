@@ -1,6 +1,13 @@
 <template>
-	<div class="res-sidebar sidbar" id="res-sidebar bg-info">
-		<b-sidebar v-model="visible" width="260px" no-header white shadow>
+	<div class="res-sidebar" id="res-sidebar bg-info">
+		<b-sidebar
+			v-model="visible"
+			width="260px"
+			no-header
+			white
+			shadow
+			id="colps-sidebar"
+		>
 			<div class="container side-border px-0">
 				<span class="d-flex justify-content-between bg-colr py-3">
 					<router-link class="logo" to="/">
@@ -147,7 +154,23 @@ export default {
 		};
 	},
 	methods: {
-		togglesid() {},
+		togglesid() {
+			var sideBar = document.getElementById("colps-sidebar");
+			sideBar.style.display = "none";
+			var navmenu = document.getElementById("nav-menu");
+			navmenu.style.display = "block";
+
+			var contWrapper = document.getElementById("content-wrapper");
+			contWrapper.style.transition = "ease .5s";
+			if (
+				contWrapper.style.paddingLeft == "0px" ||
+				contWrapper.style.paddingLeft == "5px"
+			) {
+				contWrapper.style.paddingLeft = "280px";
+			} else {
+				contWrapper.style.paddingLeft = "5px";
+			}
+		},
 	},
 };
 </script>
@@ -179,13 +202,6 @@ export default {
 			}
 		}
 	}
-}
-
-.b-sidebar > .b-sidebar-body {
-	flex-grow: 1;
-	height: 100%;
-	overflow-y: auto;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 6px 0px rgba(0, 0, 0, 0.19) !important;
 }
 
 @media screen and (max-width: 576px) and (min-width: 320px) {

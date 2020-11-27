@@ -1,7 +1,8 @@
 <template>
 	<nav class="navbar d-flex sid-style mt-0">
 		<b-button
-			@click="alert('dbkdbkb')"
+			@click="toggle_nav()"
+			id="nav-menu"
 			class="py-2 px-2 badge badge-success border-0"
 			><fa icon="bars"
 		/></b-button>
@@ -58,7 +59,22 @@ export default {
 		return { isFullscreen: false };
 	},
 	methods: {
-		toggle_nav() {},
+		toggle_nav() {
+			var sideBar = document.getElementById("colps-sidebar");
+			sideBar.style.display = "block";
+			var navmenu = document.getElementById("nav-menu");
+			navmenu.style.display = "none";
+			var contWrapper = document.getElementById("content-wrapper");
+			contWrapper.style.transition = "ease .5s";
+			if (
+				contWrapper.style.paddingLeft == "0px" ||
+				contWrapper.style.paddingLeft == "5px"
+			) {
+				contWrapper.style.paddingLeft = "280px";
+			} else {
+				contWrapper.style.paddingLeft = "5px";
+			}
+		},
 		fullScreen() {
 			var elem = document.getElementById("content-wrapper");
 			var expicon = document.getElementById("expand");
@@ -118,11 +134,11 @@ export default {
 .dropdown-menu {
 	left: -73px;
 }
-#menu2 {
-	display: block;
+#nav-menu {
+	display: none;
 }
 @media screen and (min-width: 320px) and (max-width: 575.99px) {
-	#menu2 {
+	#nav-menu {
 		display: block;
 	}
 }
