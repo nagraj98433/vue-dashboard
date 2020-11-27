@@ -16,7 +16,7 @@
 			</small>
 		</div>
 		<div class="d-flex align-items-center">
-			<b-button variant="primary" class="text-light">
+			<b-button variant="primary" class="text-light" @click="fullScreen()">
 				<fa icon="expand" />
 			</b-button>
 			<b-dropdown variant="link" class="text-success">
@@ -73,6 +73,18 @@ export default {
 				el.style.display = "block";
 			} else {
 				el_2.style.paddingLeft = "280px";
+			}
+		},
+		fullScreen() {
+			var elem = document.getElementById("content-wrapper");
+			if (elem.requestFullscreen) {
+				elem.requestFullscreen();
+			} else if (elem.webkitRequestFullscreen) {
+				/* Safari */
+				elem.webkitRequestFullscreen();
+			} else if (elem.msRequestFullscreen) {
+				/* IE11 */
+				elem.msRequestFullscreen();
 			}
 		},
 	},
