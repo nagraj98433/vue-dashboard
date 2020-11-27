@@ -11,8 +11,7 @@ const routes = [
   { path: '/', redirect: '/login' },
   { path: '/login', component: login },
   {
-    path: '/dashboard',
-    component: dashboard,
+    path: '/dashboard', component: dashboard,
     children: [
       { path: '/', component: Showcase },
       { path: 'edit-permission', component: EditPermission },

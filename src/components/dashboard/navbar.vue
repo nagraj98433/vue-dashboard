@@ -1,5 +1,5 @@
 <template>
-	<nav class="navbar d-flex pl-3">
+	<nav class="navbar d-flex sid-style">
 		<b-button
 			@click="togglenav()"
 			class="py-2 px-2 badge badge-success border-0"
@@ -16,12 +16,12 @@
 			</small>
 		</div>
 		<div class="d-flex align-items-center">
-			<b-button variant="link" class="text-dark">
+			<b-button variant="primary" class="text-light">
 				<fa icon="expand" />
 			</b-button>
-			<b-dropdown variant="link" class="text-dark">
+			<b-dropdown variant="link" class="text-success">
 				<template #button-content>
-					<fa icon="bell" />
+					<fa icon="bell" class="text-primary" />
 					<b-badge variant="danger">4</b-badge>
 				</template>
 				<!-- <div class="bg-dark">
@@ -88,7 +88,7 @@ export default {
 	/* background-image: url("~@/assets/img/dog.jpg"); */
 	background-repeat: no-repeat;
 	background-size: cover;
-	min-height: 52vh;
+	min-height: 50vh;
 	border-radius: 2px;
 	background-image: linear-gradient(
 			to bottom,
@@ -129,5 +129,9 @@ export default {
 	#menu2 {
 		display: block;
 	}
+}
+.sid-style {
+	background-color: #ffffff;
+	border-radius: 0.5rem;
 }
 </style>

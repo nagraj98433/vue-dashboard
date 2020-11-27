@@ -1,24 +1,24 @@
 <template>
-	<div class="res-sidebar" id="res-sidebar">
-		<b-sidebar v-model="visible" width="280px" no-header>
-			<div class="container bg-color px-0">
-				<span class="d-flex justify-content-around">
+	<div class="res-sidebar" id="res-sidebar bg-info">
+		<b-sidebar v-model="visible" width="260px" no-header white shadow>
+			<div class="container side-border px-0">
+				<span class="d-flex justify-content-between bg-colr py-3">
 					<router-link class="logo" to="/">
 						<img src="~@/assets/img/logo.png" alt="appa-logo" />
 					</router-link>
-					<span class="d-flex align-items-center">
-						<b-button @click="togglena1()" class="badge badge-light border-0"
+					<span class="d-flex align-items-center pr-2">
+						<b-button @click="togglena1()" class="border-0"
 							><fa icon="bars"
 						/></b-button>
 					</span>
 				</span>
-				<b-list-group flush>
+				<b-list-group style="background-color: #ffffff">
 					<div class="d-flex align-items-center list-header">
 						<span>LEVEL A (SUPERADMIN)</span>
 					</div>
 					<b-list-group-item
 						v-b-toggle.collapse-1
-						class="d-flex align-items-center justify-content-between rounded"
+						class="d-flex align-items-center justify-content-between rounded border-bottom"
 						@click.stop
 					>
 						<span>
@@ -201,9 +201,26 @@ export default {
 .res-sidebar {
 	display: block;
 }
+.b-sidebar > .b-sidebar-body {
+	flex-grow: 1;
+	height: 100%;
+	overflow-y: auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 6px 0px rgba(0, 0, 0, 0.19) !important;
+}
+
 @media screen and (max-width: 576px) and (min-width: 320px) {
 	.res-sidebar {
 		display: none;
 	}
+}
+.bg-colr {
+	background-color: #f3f2e1;
+}
+.side-border {
+	border-right: 1.5px solid #483c3c61;
+}
+.btn-secondary {
+	color: #1630ea;
+	background-color: transparent;
 }
 </style>

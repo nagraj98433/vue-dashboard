@@ -1,9 +1,7 @@
 <template>
-	<div class="container-fluid pl-4">
+	<div class="container-fluid mt-2">
 		<div class="row">
-			<div
-				class="col-12 bg-img text-center pt-5 text-light position-relative rounded"
-			>
+			<div class="col-12 bg-img pt-5 text-light position-relative rounded">
 				<div class="profile bg-dark py-2" id="toggle">
 					<p class="mb-0 text-muted">
 						<span class="mr-1"><i class="fas fa-user-alt"></i></span> My Profile
@@ -12,11 +10,11 @@
 						<span class="mr-2"><i class="fas fa-sign-out-alt"></i></span>Logout
 					</p>
 				</div>
-				<div>
+				<div class="align-bottm">
 					<p style="font-size: 28px; font-weight: 600">
 						American Pet Products Association.
 					</p>
-					<p style="font-size: 14px">
+					<p style="font-size: 14px" class="mb-0">
 						Please select a section on the left panel to start
 					</p>
 					<span style="font-size: 35px"
@@ -61,14 +59,14 @@ export default {
 .text-style:hover {
 	text-decoration: none;
 }
-.sec-left:hover {
+/* .sec-left:hover {
 	background-color: #0093e9;
 	background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
 }
 .sec-right:hover {
 	background-color: #0093e9;
 	background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
-}
+} */
 .sec-left {
 	transition: all 1s;
 }
@@ -92,5 +90,16 @@ export default {
 	.sec-left {
 		margin-bottom: 10px;
 	}
+}
+.sec-left {
+	background-image: linear-gradient(160deg, #0093e9, #80d0c7);
+	color: white;
+}
+.sec-right {
+	background-image: linear-gradient(160deg, #f44336, #9c27b0);
+	color: white;
+}
+.align-bottm {
+	padding-top: 170px;
 }
 </style>

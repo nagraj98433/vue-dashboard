@@ -1,15 +1,15 @@
 <template>
-	<div class="container-fluid bg-img-pets font-style">
-		<div class="row">
-			<div class="col-12 bg-white-gradient">
-				<div class="col ml-auto mr-auto top-logo img-fluid"></div>
-			</div>
-		</div>
-		<div class="row align_btm">
-			<div class="col pt-2">
-				<button type="button" class="btn btn-login text-light" @click="login()">
-					LOGIN
-				</button>
+	<div class="container-fluid bg-img-pets font-style px-0">
+		<div class="d-flex align-items-center" style="min-height: 100vh">
+			<div
+				class="main-div login-bg mx-auto d-flex flex-column align-items-center"
+			>
+				<div class="top-logo py-5 px-4"></div>
+				<div class="mt-3 login_btn">
+					<button type="button" class="rounded-pill" @click="login()">
+						LOGIN
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -25,42 +25,44 @@ export default {
 };
 </script>
 <style>
+.main-div {
+	min-height: 181px;
+}
+.login-bg {
+	border-radius: 15px;
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 15px 25px;
+}
+.login_btn button {
+	padding: 7px 150px;
+	background: linear-gradient(45deg, #8e24aa, #ff6e40) !important;
+	border: none;
+	outline: none;
+	color: white;
+	transition: ease 0.5s;
+}
+.login_btn button:hover {
+	transform: scale(0.9);
+}
+.top-logo {
+	background-image: url("~@/assets/img/logo.png");
+	height: 147px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	/* width: 100%; */
+}
 .bg-img-pets {
-	background-image: url("~@/assets/img/pet_dogs.jpeg");
+	background-image: url("~@/assets/img/login-dogs.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100%;
 	background-position: center center;
 }
 .bg-img-pets {
-	height: 100vh;
+	/* height: 100vh; */
 }
-.top-logo {
-	background-image: url("~@/assets/img/logo.png");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 65%;
-	height: 140px;
-}
-.bg-white-gradient {
-	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
-	background: -moz-linear-gradient(
-		top,
-		rgba(255, 255, 255, 1) 0%,
-		rgba(255, 255, 255, 0) 100%
-	); /* FF3.6-15 */
-	background: -webkit-linear-gradient(
-		top,
-		rgba(255, 255, 255, 1) 0%,
-		rgba(255, 255, 255, 0) 100%
-	); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(
-		to bottom,
-		rgba(255, 255, 255, 1) 0%,
-		rgba(255, 255, 255, 0) 100%
-	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
-}
+
 .align_btm {
 	text-align: center;
 	position: absolute;
@@ -68,22 +70,6 @@ export default {
 	/* bottom: 35px; */
 	bottom: 0px;
 	height: 100px;
-	background: -moz-linear-gradient(
-		top,
-		rgba(0, 0, 0, 0) 0%,
-		rgba(0, 0, 0, 0.65) 100%
-	); /* FF3.6-15 */
-	background: -webkit-linear-gradient(
-		top,
-		rgba(0, 0, 0, 0) 0%,
-		rgba(0, 0, 0, 0.65) 100%
-	); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(
-		to bottom,
-		rgba(0, 0, 0, 0) 0%,
-		rgba(0, 0, 0, 0.65) 100%
-	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
 }
 
 .btn-login {
@@ -91,7 +77,7 @@ export default {
 	padding: 5px 50px;
 }
 .font-style {
-	font-family: montserrat;
+	font-family: roboto sans-serif;
 }
 @media screen and (min-width: 320px) and (max-width: 575.99px) {
 	.bg-img-pets {
@@ -99,9 +85,10 @@ export default {
 	}
 	.top-logo {
 		width: 80%;
+		/* height: 75px; */
 	}
-	.btn-login {
-		padding: 5px 35px;
+	.login_btn button {
+		padding: 5px 45px;
 	}
 }
 
@@ -140,7 +127,7 @@ export default {
 		background-size: cover;
 	}
 	.top-logo {
-		width: 35%;
+		width: 100%;
 	}
 }
 

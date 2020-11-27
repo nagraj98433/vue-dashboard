@@ -1,5 +1,8 @@
 <template>
-	<div class="container-fluid content-wrapper menu" id="content-wrapper">
+	<div
+		class="container-fluid content-wrapper menu overflow-hidden pr-0"
+		id="content-wrapper"
+	>
 		<sidebar />
 		<div class="container-fluid px-0">
 			<navbar />
@@ -23,4 +26,7 @@ export default {
 };
 </script>
 <style>
+.content-wrapper {
+	background-color: #4a49301c;
+}
 </style>
