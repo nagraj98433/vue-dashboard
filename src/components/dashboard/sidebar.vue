@@ -60,7 +60,7 @@
 					</div>
 					<b-list-group-item
 						v-b-toggle.collapse-2
-						class="d-flex align-items-center justify-content-between rounded border-top"
+						class="d-flex align-items-center justify-content-between rounded border-bottom"
 						@click.stop
 					>
 						<span>
@@ -95,7 +95,7 @@
 					</div>
 					<b-list-group-item
 						v-b-toggle.collapse-3
-						class="d-flex align-items-center justify-content-between rounded border-top"
+						class="d-flex align-items-center justify-content-between rounded border-bottom"
 						@click.stop
 					>
 						<span>
