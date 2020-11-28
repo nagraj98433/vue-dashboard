@@ -4,7 +4,7 @@
 			<div
 				class="main-div login-bg mx-auto d-flex flex-column align-items-center"
 			>
-				<div class="top-logo py-5 px-4"></div>
+				<div class="top-logo py-0 px-2"></div>
 				<div class="mt-3 login_btn">
 					<button type="button" class="rounded-pill" @click="login()">
 						LOGIN
@@ -59,9 +59,9 @@ export default {
 	background-size: 100%;
 	background-position: center center;
 }
-.bg-img-pets {
-	/* height: 100vh; */
-}
+/* .bg-img-pets {
+	height: 100vh;
+} */
 
 .align_btm {
 	text-align: center;
@@ -79,16 +79,27 @@ export default {
 .font-style {
 	font-family: roboto sans-serif;
 }
+
 @media screen and (min-width: 320px) and (max-width: 575.99px) {
 	.bg-img-pets {
 		background-size: cover;
 	}
 	.top-logo {
-		width: 80%;
-		/* height: 75px; */
+		width: 220px;
+		height: 95px;
+		background-position: center bottom;
 	}
 	.login_btn button {
 		padding: 5px 45px;
+	}
+	.login-bg {
+		padding: 0px 0px;
+	}
+	.main-div {
+		width: 245px;
+	}
+	.main-div {
+		min-height: 149px;
 	}
 }
 
@@ -106,7 +117,7 @@ export default {
 		background-size: cover;
 	}
 	.top-logo {
-		width: 50%;
+		width: 100%;
 	}
 }
 
@@ -115,7 +126,7 @@ export default {
 		background-size: cover;
 	}
 	.top-logo {
-		width: 35%;
+		width: 100%;
 	}
 	.align_btm {
 		padding-top: 32px;
@@ -136,7 +147,7 @@ export default {
 		background-size: cover;
 	}
 	.top-logo {
-		width: 20%;
+		width: 100%;
 	}
 	.btn-login {
 		padding: 20px 100px;
