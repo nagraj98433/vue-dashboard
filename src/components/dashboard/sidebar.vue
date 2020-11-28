@@ -222,13 +222,13 @@ export default {
 	color: #1630ea;
 	background-color: transparent;
 }
-.container .logo img[data-v-772072fe] {
+.container .logo img {
 	height: 90px;
 	padding: 9px 1px 4px 5px;
 	margin: 4px 5px;
 	display: block;
 }
-.side-border[data-v-772072fe] {
+.side-border {
 	border-right: 1.5px solid #483c3c61;
 	overflow: hidden;
 }
