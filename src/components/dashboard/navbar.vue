@@ -137,11 +137,15 @@ export default {
 #nav-menu {
 	display: none;
 }
-@media screen and (min-width: 320px) and (max-width: 575.99px) {
-	#nav-menu {
+/* @media screen and (min-width: 320px) and (max-width: 575.99px) {
+	#nav-menu,
+	#colps-sidebar {
 		display: block;
 	}
-}
+	.nav-bar {
+		width: 100%;
+	}
+} */
 .sid-style {
 	background-color: #ffffff;
 	border-radius: 0.5rem;

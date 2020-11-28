@@ -204,9 +204,9 @@ export default {
 	}
 }
 
-@media screen and (max-width: 576px) and (min-width: 320px) {
+@media screen and (max-width: 575.99px) and (min-width: 320px) {
 	.res-sidebar {
-		display: none;
+		// display: none;
 	}
 }
 .bg-colr {
