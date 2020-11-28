@@ -25,7 +25,7 @@
 					</div>
 					<b-list-group-item
 						v-b-toggle.collapse-1
-						class="d-flex align-items-center justify-content-between rounded border-bottom"
+						class="d-flex align-items-center justify-content-between rounded border-top"
 						@click.stop
 					>
 						<span>
@@ -41,6 +41,7 @@
 					<b-collapse id="collapse-1" class="mt-2" visible>
 						<b-list-group>
 							<b-list-group-item
+								class="border"
 								v-for="(link, index) in links"
 								:key="'l_' + index"
 								:to="'/dashboard/' + link.path"
@@ -53,13 +54,13 @@
 					</b-collapse>
 				</b-list-group>
 
-				<b-list-group flush>
+				<b-list-group>
 					<div class="d-flex align-items-center list-header mt-3">
 						<span>LEVEL B (ADMINS)</span>
 					</div>
 					<b-list-group-item
 						v-b-toggle.collapse-2
-						class="d-flex align-items-center justify-content-between"
+						class="d-flex align-items-center justify-content-between rounded border-top"
 						@click.stop
 					>
 						<span>
@@ -73,8 +74,9 @@
 						</span>
 					</b-list-group-item>
 					<b-collapse id="collapse-2" class="mt-2">
-						<b-list-group flush>
+						<b-list-group>
 							<b-list-group-item
+								class="border-bottom"
 								v-for="(link, index) in links"
 								:key="'l_' + index"
 								:to="'/dashboard/' + link.path"
@@ -87,13 +89,13 @@
 					</b-collapse>
 				</b-list-group>
 
-				<b-list-group flush>
+				<b-list-group>
 					<div class="d-flex align-items-center list-header mt-3">
 						<span>LEVEL C (END USERS)</span>
 					</div>
 					<b-list-group-item
 						v-b-toggle.collapse-3
-						class="d-flex align-items-center justify-content-between"
+						class="d-flex align-items-center justify-content-between rounded border-top"
 						@click.stop
 					>
 						<span>
@@ -109,6 +111,7 @@
 					<b-collapse id="collapse-3" class="mt-2">
 						<b-list-group flush>
 							<b-list-group-item
+								class="border-bottom"
 								v-for="(link, index) in links"
 								:key="'l_' + index"
 								:to="'/dashboard/' + link.path"
@@ -204,11 +207,11 @@ export default {
 	}
 }
 
-@media screen and (max-width: 575.99px) and (min-width: 320px) {
-	.res-sidebar {
-		// display: none;
-	}
-}
+// @media screen and (max-width: 575.99px) and (min-width: 320px) {
+// 	.res-sidebar {
+// 		display: none;
+// 	}
+// }
 .bg-colr {
 	background-color: #f3f2e1;
 }
