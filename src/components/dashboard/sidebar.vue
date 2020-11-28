@@ -2,24 +2,24 @@
 	<div class="res-sidebar" id="res-sidebar bg-info">
 		<b-sidebar
 			v-model="visible"
-			width="260px"
+			width="270px"
 			no-header
 			white
 			shadow
 			id="colps-sidebar"
 		>
 			<div class="container side-border px-0">
-				<span class="d-flex justify-content-between bg-colr py-3">
+				<span class="d-flex justify-content-between bg-colr">
 					<router-link class="logo" to="/">
 						<img src="~@/assets/img/logo.png" alt="appa-logo" />
 					</router-link>
-					<span class="d-flex align-items-center pr-2">
-						<b-button @click="togglesid()" class="border-0"
+					<span class="d-flex align-items-center pr-0">
+						<b-button @click="togglesid()" class="border-0 m-1 px-0 py-0"
 							><fa icon="bars"
 						/></b-button>
 					</span>
 				</span>
-				<b-list-group style="background-color: #ffffff">
+				<b-list-group style="background-color: #ffffff" class="pt-2">
 					<div class="d-flex align-items-center list-header">
 						<span>LEVEL A (SUPERADMIN)</span>
 					</div>
@@ -221,5 +221,15 @@ export default {
 .btn-secondary {
 	color: #1630ea;
 	background-color: transparent;
+}
+.container .logo img[data-v-772072fe] {
+	height: 90px;
+	padding: 9px 1px 4px 5px;
+	margin: 4px 5px;
+	display: block;
+}
+.side-border[data-v-772072fe] {
+	border-right: 1.5px solid #483c3c61;
+	overflow: hidden;
 }
 </style>
