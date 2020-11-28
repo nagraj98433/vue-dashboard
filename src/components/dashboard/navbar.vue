@@ -137,15 +137,21 @@ export default {
 #nav-menu {
 	display: none;
 }
-/* @media screen and (min-width: 320px) and (max-width: 575.99px) {
-	#nav-menu,
-	#colps-sidebar {
-		display: block;
+@media screen and (min-width: 320px) and (max-width: 575.99px) {
+	.bg-img {
+		background-repeat: no-repeat;
+		background-size: cover;
+		min-height: 50vh;
+		border-radius: 0.5rem;
+		background-image: linear-gradient(
+				to bottom,
+				rgba(255, 255, 255, 0.52),
+				rgba(0, 0, 0, 0.73)
+			),
+			url("~@/assets/img/dog.jpg");
+		background-position: center right;
 	}
-	.nav-bar {
-		width: 100%;
-	}
-} */
+}
 .sid-style {
 	background-color: #ffffff;
 	border-radius: 0.5rem;
