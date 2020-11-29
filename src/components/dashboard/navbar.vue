@@ -143,7 +143,7 @@ export default {
 #nav-menu {
 	display: none;
 }
-@media screen and (min-width: 320px) and (max-width: 575.99px) {
+@media screen and (min-width: 320px) and (max-width: 576px) {
 	.bg-img {
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -226,9 +226,9 @@ export default {
 	background-color: #ffffff;
 	border-radius: 0.5rem;
 }
-@media screen and (min-width: 576px) and (max-width: 767.99px) {
+@media screen and (min-width: 577px) and (max-width: 767.99px) {
 	.navbar_2 {
-		/* display: flex; */
+		display: flex;
 		justify-content: space-around;
 		width: 100%;
 	}
