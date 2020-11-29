@@ -18,7 +18,7 @@
 		<div class="d-flex align-items-center">
 			<b-button
 				variant="primary"
-				class="text-light"
+				class="text-light expand"
 				id="expand"
 				@click="fullScreen()"
 			>
@@ -150,6 +150,49 @@ export default {
 			),
 			url("~@/assets/img/dog.jpg");
 		background-position: center right;
+	}
+	.b-avatar {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		vertical-align: middle;
+		flex-shrink: 0;
+		width: 25px;
+		height: 25px;
+		font-size: inherit;
+		font-weight: 400;
+		line-height: 1;
+		max-width: 100%;
+		max-height: auto;
+		text-align: center;
+		overflow: visible;
+		position: relative;
+		transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+			box-shadow 0.15s ease-in-out;
+	}
+	.expand {
+		display: inline-block;
+		font-weight: 400;
+		color: #212529;
+		text-align: center;
+		vertical-align: middle;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		background-color: transparent;
+		border: 1px solid transparent;
+		padding: 2px 8px;
+		font-size: 15px;
+		line-height: 1.5;
+		border-radius: 0.25rem;
+		transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+			border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	}
+	.btn-primary {
+		color: #fff;
+		background-color: #007bff;
+		border-color: #007bff;
 	}
 }
 .sid-style {
