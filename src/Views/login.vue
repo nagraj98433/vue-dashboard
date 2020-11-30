@@ -83,6 +83,7 @@ export default {
 @media screen and (min-width: 320px) and (max-width: 575.99px) {
 	.bg-img-pets {
 		background-size: cover;
+		background-position-x: right;
 	}
 	.top-logo {
 		width: 220px;
