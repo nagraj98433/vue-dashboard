@@ -46,9 +46,9 @@
 					</div>
 				</div> -->
 				</b-dropdown>
-				<b-dropdown variant="link">
+				<b-dropdown variant="link" class="pb-2">
 					<template #button-content>
-						<b-avatar variant="primary" text="J" class=""></b-avatar>
+						<b-avatar variant="primary" text="J"></b-avatar>
 					</template>
 					<b-dropdown-item href="#">An item</b-dropdown-item>
 					<b-dropdown-item href="#">Another item</b-dropdown-item>
@@ -210,7 +210,6 @@ export default {
 		background-color: transparent;
 		border: 0px solid transparent;
 		padding: 0px 6px;
-		padding-bottom: 10px;
 		font-size: 15px;
 		line-height: 1.5;
 		border-radius: 0.25rem;
