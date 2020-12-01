@@ -1,5 +1,5 @@
 <template>
-	<nav class="navbar d-flex sid-style mt-0 px-2">
+	<nav class="navbar d-flex sid-style mt-0 px-2 py-0">
 		<div class="navbar_2 w-100">
 			<b-button @click="toggle_nav()" id="nav-menu" class="py-2 px-2"
 				><fa icon="bars"
@@ -7,12 +7,16 @@
 			<div class="d-flex flex-grow-1 ml-3 flex-row name">
 				<h6 class="mb-0 font-weight-bold pt-2">
 					Hello, <span class="text-success">John</span>
-					<marquee scrollamount="4">
+					<marquee scrollamount="4" v-if="$mq === 'mobile'">
 						<small class="text-success d-block"
 							><span class="text-dark">Adminstration |</span>
 							john@yahoo.com</small
 						>
 					</marquee>
+					<small class="text-success d-block" v-else
+						><span class="text-dark">Adminstration |</span>
+						john@yahoo.com</small
+					>
 				</h6>
 				<!-- <small>
 				<marquee scollamount="4">
