@@ -32,7 +32,7 @@
 				<b-dropdown variant="link" class="text-success">
 					<template #button-content>
 						<fa icon="bell" class="text-primary" />
-						<b-badge variant="danger">4</b-badge>
+						<b-badge variant="danger">0</b-badge>
 					</template>
 					<!-- <div class="bg-dark">
 					<div class="border-bottom border-secondary text-muted pb-2">
@@ -316,5 +316,21 @@ export default {
 		background-color: transparent !important;
 		border-color: transparent !important;
 	}
+}
+.btn .badge {
+	position: relative;
+	top: -12px;
+	left: -4px;
+}
+.dropdown-toggle::after {
+	display: inline-block;
+	margin-left: 0.255em;
+	vertical-align: 0.255em;
+	content: "";
+	border-top: 0.3em solid;
+	border-right: 0.3em solid transparent;
+	border-bottom: 0;
+	border-left: 0.3em solid transparent;
+	display: none;
 }
 </style>
