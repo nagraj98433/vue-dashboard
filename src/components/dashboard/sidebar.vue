@@ -7,6 +7,7 @@
 			white
 			shadow
 			id="colps-sidebar"
+			ref="collapse"
 		>
 			<div class="container side-border px-0">
 				<span class="d-flex justify-content-between bg-colr">

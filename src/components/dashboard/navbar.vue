@@ -22,7 +22,7 @@
 			</div>
 			<div class="d-flex align-items-center">
 				<b-button
-					variant="primary"
+					variant="btn btn-link"
 					class="expand"
 					id="expand"
 					@click="fullScreen()"
@@ -91,10 +91,13 @@ export default {
 				elem.requestFullscreen();
 				elem.style.backgroundColor = "#eaeae9";
 				expicon.style.backgroundColor = "black";
+				expicon.style.color = "white";
 			} else {
 				document.exitFullscreen();
 				elem.style.backgroundColor = "#eaeae9";
-				expicon.style.backgroundColor = "#007bff";
+				expicon.style.backgroundColor = "transparent";
+				expicon.style.color = "blue";
+				expicon.style.outline = "none";
 			}
 		},
 	},
@@ -226,11 +229,26 @@ export default {
 	background-color: #ffffff;
 	border-radius: 0.5rem;
 }
-@media screen and (min-width: 577px) and (max-width: 767.99px) {
+@media screen and (min-width: 576px) and (max-width: 767.99px) {
 	.navbar_2 {
 		display: flex;
 		justify-content: space-around;
 		width: 100%;
+	}
+	.btn-secondary {
+		color: #272424;
+		background-color: transparent;
+		border-color: transparent;
+	}
+	.btn-secondary:hover {
+		color: #272424;
+		background-color: transparent;
+		border-color: transparent;
+	}
+	.btn-secondary:active {
+		color: #272424 !important;
+		background-color: transparent !important;
+		border-color: transparent !important;
 	}
 }
 @media screen and (min-width: 768px) and (max-width: 991.99px) {

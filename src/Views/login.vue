@@ -1,5 +1,5 @@
 <template>
-	<div class="container-fluid bg-img-pets font-style px-0">
+	<div class="container-fluid bg-img-pets font-style px-0 img-fluid">
 		<div class="d-flex align-items-center" style="min-height: 100vh">
 			<div
 				class="main-div login-bg mx-auto d-flex flex-column align-items-center"
