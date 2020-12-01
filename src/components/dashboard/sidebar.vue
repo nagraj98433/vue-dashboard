@@ -7,7 +7,7 @@
 			white
 			shadow
 			id="colps-sidebar"
-			ref="collapse"
+			ref="colps"
 		>
 			<div class="container side-border px-0">
 				<span class="d-flex justify-content-between bg-colr">
@@ -160,6 +160,8 @@ export default {
 	methods: {
 		togglesid() {
 			var sideBar = document.getElementById("colps-sidebar");
+			// var sideBar = this.$refs.colps.$el;
+			// console.log(sideBar);
 			sideBar.style.display = "none";
 			var navmenu = document.getElementById("nav-menu");
 			navmenu.style.display = "block";
