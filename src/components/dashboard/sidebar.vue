@@ -159,23 +159,13 @@ export default {
 	},
 	methods: {
 		togglesid() {
-			var sideBar = document.getElementById("colps-sidebar");
-			// var sideBar = this.$refs.colps.$el;
-			// console.log(sideBar);
-			sideBar.style.display = "none";
-			var navmenu = document.getElementById("nav-menu");
-			navmenu.style.display = "block";
-
-			var contWrapper = document.getElementById("content-wrapper");
-			contWrapper.style.transition = "ease .5s";
-			if (
-				contWrapper.style.paddingLeft == "0px" ||
-				contWrapper.style.paddingLeft == "5px"
-			) {
-				contWrapper.style.paddingLeft = "280px";
-			} else {
-				contWrapper.style.paddingLeft = "5px";
-			}
+			var sideBar = document.getElementsByClassName("res-sidebar");
+			sideBar[0].style.display = "none";
+			var cont_wrapper = document.getElementById("content-wrapper");
+			cont_wrapper.style.paddingLeft = "5px";
+			cont_wrapper.style.transition = "ease .5s";
+			var nav_menu = document.getElementById("nav-menu");
+			nav_menu.style.display = "block";
 		},
 	},
 };
@@ -210,11 +200,11 @@ export default {
 	}
 }
 
-// @media screen and (max-width: 575.99px) and (min-width: 320px) {
-// 	.res-sidebar {
-// 		display: none;
-// 	}
-// }
+@media screen and (max-width: 575.99px) and (min-width: 320px) {
+	.res-sidebar {
+		display: none;
+	}
+}
 .bg-colr {
 	background-color: #f3f2e1;
 }

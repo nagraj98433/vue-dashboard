@@ -1,6 +1,6 @@
 <template>
 	<nav class="navbar d-flex sid-style mt-0 px-2">
-		<div class="navbar_2">
+		<div class="navbar_2 w-100">
 			<b-button @click="toggle_nav()" id="nav-menu" class="py-2 px-2"
 				><fa icon="bars"
 			/></b-button>
@@ -62,24 +62,17 @@
 export default {
 	name: "navbar",
 	data() {
-		return { isFullscreen: false };
+		return { isFullscreen: false, isShow: false };
 	},
 	methods: {
 		toggle_nav() {
-			var sideBar = document.getElementById("colps-sidebar");
-			sideBar.style.display = "block";
-			var navmenu = document.getElementById("nav-menu");
-			navmenu.style.display = "none";
-			var contWrapper = document.getElementById("content-wrapper");
-			contWrapper.style.transition = "ease .5s";
-			if (
-				contWrapper.style.paddingLeft == "0px" ||
-				contWrapper.style.paddingLeft == "5px"
-			) {
-				contWrapper.style.paddingLeft = "280px";
-			} else {
-				contWrapper.style.paddingLeft = "5px";
-			}
+			var sideBar = document.getElementsByClassName("res-sidebar");
+			sideBar[0].style.display = "block";
+			var cont_wrapper = document.getElementById("content-wrapper");
+			cont_wrapper.style.paddingLeft = "280px";
+			cont_wrapper.style.transition = "ease .5s";
+			var nav_menu = document.getElementById("nav-menu");
+			nav_menu.style.display = "none";
 		},
 		fullScreen() {
 			var elem = document.getElementById("content-wrapper");
@@ -104,6 +97,9 @@ export default {
 };
 </script>
 <style>
+#nav-menu {
+	display: none;
+}
 .notification {
 	position: absolute;
 	right: 0.25rem;
@@ -143,10 +139,13 @@ export default {
 .dropdown-menu {
 	left: -73px;
 }
-#nav-menu {
+/* #nav-menu {
 	display: none;
-}
+} */
 @media screen and (min-width: 320px) and (max-width: 576px) {
+	#nav-menu {
+		display: block;
+	}
 	.bg-img {
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -211,6 +210,7 @@ export default {
 		background-color: transparent;
 		border: 0px solid transparent;
 		padding: 0px 6px;
+		padding-bottom: 10px;
 		font-size: 15px;
 		line-height: 1.5;
 		border-radius: 0.25rem;
